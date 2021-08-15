@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Student Info</string>
+    <string name="a_record_keeping_app">A simple record keeping app</string>
+    <string name="start_app">Continue →</string>
+    <string name="create_your_account">Create your account</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="re_type_password">Re-type password</string>
+    <string name="register_now">Register Now</string>
+    <string name="already_registered_login_here">Already registered? Login Here</string>
+    <string name="login_to_your_account">Login to your account</string>
+    <string name="login">Login</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="add_student">Add</string>
+    <string name="remove_student">Remove</string>
+    <string name="find_record">Find</string>
+    <string name="update_record">Update</string>
+    <string name="insert_record">Insert\nRecord</string>
+    <string name="enter_student_name">Enter student name</string>
+    <string name="enter_student_id">Enter student ID</string>
+    <string name="select_gender">Select Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="choose_section">Choose Section</string>
+    <string name="store_data">Store Data</string>
+    <string name="return_to_main_menu">Return to main menu</string>
+    <string name="search_record">Search\nRecord</string>
+    <string name="search_by_id">Search by ID</string>
+    <string name="submit">Find</string>
+    <string-array name="section_array">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nothing_to_show">Nothing to show</string>
+    <string name="record_found_in_the_database">Record found in the database!!!</string>
+    <string name="sign_up_for_an_account">Sign up for a new account</string>
+    <string name="enter_age">Enter age</string>
+    <string name="delete_record">Delete\nRecord</string>
+    <string name="remove_data">Remove Data</string>
+    <string name="enter_student_id_to_be_deleted">Enter student ID for record deletion</string>
+    <string name="section">Section:</string>
+    <string name="gender">Gender:</string>
+    <string name="age">Age:</string>
+    <string name="update">Update\nRecord</string>
+</resources>

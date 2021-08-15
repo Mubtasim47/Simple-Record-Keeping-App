@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ECD9D8"
+    tools:context=".UpdateActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/archivo_black"
+                android:text="@string/update"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/upSearchEditTextID"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/search_by_id"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:backgroundTint="#324550"/>
+
+            <Button
+                android:id="@+id/upSubmitButtonID"
+                android:layout_marginTop="25dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FF7043"
+                android:text="@string/submit"
+                android:onClick="submit"
+                tools:ignore="OnClick,UsingOnClickInXml" />
+
+
+            <View
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#5C6BC0"/>
+
+            <EditText
+                android:id="@+id/upNameEditTextID"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_student_name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:backgroundTint="#324550"/>
+
+            <EditText
+                android:id="@+id/upAgeEditTextID"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_age"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:inputType="number"
+                android:backgroundTint="#324550"/>
+
+            <TextView
+                android:id="@+id/upTextView1ID"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/select_gender"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:backgroundTint="#324550"/>
+
+            <RadioGroup
+                android:id="@+id/upRadioGroupID"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/male"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/female"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/upTextView2ID"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/choose_section"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:backgroundTint="#324550"/>
+
+            <Spinner
+                android:id="@+id/upSpinnerID"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_width="wrap_content"
+                android:paddingVertical="10dp"
+                android:paddingEnd="10dp"
+                android:layout_height="48dp"
+                tools:ignore="RtlSymmetry" />
+
+            <Button
+                android:id="@+id/upUpdateButtonID"
+                android:layout_marginVertical="25dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FF7043"
+                android:text="@string/update_record"
+                android:onClick="update"
+                tools:ignore="OnClick,UsingOnClickInXml" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

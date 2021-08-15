@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#324550"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/coiny"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="45sp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create_your_account"
+        android:textColor="@color/white"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/rgFullNameID"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:hint="@string/enter_your_name"
+        android:background="@drawable/et_background"
+        android:padding="15dp"
+        android:textColorHint="#DFD9D9"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/rgUserEmailID"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:hint="@string/enter_your_email"
+        android:background="@drawable/et_background"
+        android:padding="15dp"
+        android:textColorHint="#DFD9D9"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:textColor="@color/white"/>
+
+    <EditText
+        android:id="@+id/rgPasswordID"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:hint="@string/enter_password"
+        android:background="@drawable/et_background"
+        android:padding="15dp"
+        android:textColorHint="#DFD9D9"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:textColor="@color/white"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:id="@+id/rgReTypePasswordID"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:hint="@string/re_type_password"
+        android:background="@drawable/et_background"
+        android:padding="15dp"
+        android:textColorHint="#DFD9D9"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:textColor="@color/white"
+        android:inputType="textPassword"/>
+
+    <Button
+        android:id="@+id/rgRegisterBtnID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_background"
+        android:paddingHorizontal="50dp"
+        android:paddingVertical="15dp"
+        android:text="@string/register_now"
+        android:textColor="@color/white"
+        android:onClick="register"
+        tools:ignore="UsingOnClickInXml" />
+
+    <TextView
+        android:id="@+id/rgLoginTxtID"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/already_registered_login_here"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:onClick="loginPage"
+        tools:ignore="UsingOnClickInXml" />
+
+    <ProgressBar
+        android:id="@+id/rgProgressBarID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:visibility="invisible" />
+
+
+
+</LinearLayout>

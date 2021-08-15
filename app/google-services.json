@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1076063898041",
+    "project_id": "info-track-54c34",
+    "storage_bucket": "info-track-54c34.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1076063898041:android:2b3651cc6efa9a7e700e68",
+        "android_client_info": {
+          "package_name": "com.example.infotrack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1076063898041-smp7ar18s6nllf45s7lflbktfrhm9tlj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7XihDcfSgAwIi28eRFpvgk5Ucy4Ev3oE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1076063898041-smp7ar18s6nllf45s7lflbktfrhm9tlj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

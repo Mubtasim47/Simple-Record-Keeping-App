@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/mubta/AndroidStudioProjects/InfoTrack/app/src/main/res/drawable-v24/button_background.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/mubta/AndroidStudioProjects/InfoTrack/app/src/main/res/drawable-v24/editText_background.xml" value="0.22711111111111112" />
+        <entry key="..\:/Users/mubta/AndroidStudioProjects/InfoTrack/app/src/main/res/drawable/et_background.xml" value="0.15092592592592594" />
+        <entry key="..\:/Users/mubta/AndroidStudioProjects/InfoTrack/app/src/main/res/drawable/et_background2.xml" value="0.2301801801801802" />
+        <entry key="..\:/Users/mubta/AndroidStudioProjects/InfoTrack/app/src/main/res/layout/activity_add.xml" value="0.21621621621621623" />
+        <entry key="..\:/Users/mubta/AndroidStudioProjects/InfoTrack/app/src/main/res/layout/activity_delete.xml" value="0.21621621621621623" />
+        <entry key="..\:/Users/mubta/AndroidStudioProjects/InfoTrack/app/src/main/res/layout/activity_find.xml" value="0.176" />
+        <entry key="..\:/Users/mubta/AndroidStudioProjects/InfoTrack/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Users/mubta/AndroidStudioProjects/InfoTrack/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/mubta/AndroidStudioProjects/InfoTrack/app/src/main/res/layout/activity_menu.xml" value="0.264" />
+        <entry key="..\:/Users/mubta/AndroidStudioProjects/InfoTrack/app/src/main/res/layout/activity_register.xml" value="0.2" />
+        <entry key="..\:/Users/mubta/AndroidStudioProjects/InfoTrack/app/src/main/res/layout/activity_update.xml" value="0.2" />
+        <entry key="..\:/Users/mubta/AndroidStudioProjects/InfoTrack/app/src/main/res/layout/fragment_blank.xml" value="0.21621621621621623" />
+        <entry key="..\:/Users/mubta/AndroidStudioProjects/InfoTrack/app/src/main/res/layout/fragment_display.xml" value="0.176" />
+        <entry key="..\:/Users/mubta/AndroidStudioProjects/InfoTrack/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.12387387387387387" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
