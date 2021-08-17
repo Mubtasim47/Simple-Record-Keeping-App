@@ -4,8 +4,8 @@ This app includes following features:
 <ul>
   <li>Login</li>
   <li>Registration</li>
-  <li>Create Info</li>
   <li>Menu</li>
+  <li>Create Info</li>
   <li>Read Info</li>
   <li>Update Info</li>
   <li>Delete Info</li>
