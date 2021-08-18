@@ -3,6 +3,7 @@ package com.example.infotrack;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -81,7 +82,6 @@ public class UpdateActivity extends AppCompatActivity implements AdapterView.OnI
     }
 
     public void submit(View view) {
-
         error = "Please fill up this field";
         id = idEditText.getText().toString();
         if(TextUtils.isEmpty(id)) {
@@ -91,7 +91,7 @@ public class UpdateActivity extends AppCompatActivity implements AdapterView.OnI
 
         reference = FirebaseDatabase.getInstance().getReference().child("Students").child(id);
         errorFlag = false;
-        reference.addValueEventListener(new ValueEventListener() {
+        reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 try {
@@ -99,25 +99,27 @@ public class UpdateActivity extends AppCompatActivity implements AdapterView.OnI
                     age = snapshot.child("age").getValue().toString();
                     gender = snapshot.child("gender").getValue().toString();
                     section = snapshot.child("section").getValue().toString();
-                } catch(Throwable e) {
-                   Toast.makeText(getApplicationContext(), "ID doesn't have any match", Toast.LENGTH_LONG).show();
-                   return;
-                }
 
-                nameEditText.setVisibility(View.VISIBLE);
-                nameEditText.setHint(name);
-                ageEditText.setVisibility(View.VISIBLE);
-                ageEditText.setHint(age);
-                textView1.setVisibility(View.VISIBLE);
-                if(gender.equals("Male")) {
-                    radioGroup.check(radioGroup.getChildAt(0).getId());
-                } else {
-                    radioGroup.check(radioGroup.getChildAt(1).getId());
+                    nameEditText.setVisibility(View.VISIBLE);
+                    nameEditText.setHint(name);
+                    ageEditText.setVisibility(View.VISIBLE);
+                    ageEditText.setHint(age);
+                    textView1.setVisibility(View.VISIBLE);
+
+                    if(gender.equals("Male")) {
+                        radioGroup.check(radioGroup.getChildAt(0).getId());
+                    } else {
+                        radioGroup.check(radioGroup.getChildAt(1).getId());
+                    }
+
+                    radioGroup.setVisibility(View.VISIBLE);
+                    textView2.setVisibility(View.VISIBLE);
+                    spinner.setVisibility(View.VISIBLE);
+                    updateButton.setVisibility(View.VISIBLE);
+
+                } catch(Throwable e) {
+                   Toast.makeText(UpdateActivity.this, "ID doesn't have any match", Toast.LENGTH_SHORT).show();
                 }
-                radioGroup.setVisibility(View.VISIBLE);
-                textView2.setVisibility(View.VISIBLE);
-                spinner.setVisibility(View.VISIBLE);
-                updateButton.setVisibility(View.VISIBLE);
 
             }
             @Override
@@ -150,13 +152,19 @@ public class UpdateActivity extends AppCompatActivity implements AdapterView.OnI
         int buttonID = radioGroup.getCheckedRadioButtonId();
         error = "You must select your gender";
         if(buttonID == -1) {
-            Toast.makeText(getApplicationContext(), error, Toast.LENGTH_SHORT).show();
+            Toast.makeText(UpdateActivity.this, error, Toast.LENGTH_SHORT).show();
             return;
         }
         radioButton = findViewById(buttonID);
         gender = radioButton.getText().toString();
 
         reference2.child(id).setValue(new Student(name, age, gender, section));
-        Toast.makeText(getApplicationContext(), "Data Updated Successfully", Toast.LENGTH_SHORT).show();
+        Toast.makeText(UpdateActivity.this, "Data Updated Successfully", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+        startActivity(new Intent(UpdateActivity.this, MenuActivity.class));
     }
 }

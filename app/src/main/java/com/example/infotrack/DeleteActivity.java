@@ -12,7 +12,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class DeleteActivity extends AppCompatActivity {
-    EditText idEditText;
+    private EditText idEditText;
 
     DatabaseReference rootReference;
 
@@ -29,10 +29,16 @@ public class DeleteActivity extends AppCompatActivity {
         String searchID = idEditText.getText().toString();
         rootReference.child("Students").child(searchID).removeValue();
 
-        Toast.makeText(getApplicationContext(), "Record Deleted", Toast.LENGTH_SHORT).show();
+        Toast.makeText(DeleteActivity.this, "Record Deleted", Toast.LENGTH_SHORT).show();
     }
 
     public void mainMenu(View view) {
-        startActivity(new Intent(getApplicationContext(), MenuActivity.class));
+        startActivity(new Intent(DeleteActivity.this, MenuActivity.class));
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+        startActivity(new Intent(DeleteActivity.this, MenuActivity.class));
     }
 }

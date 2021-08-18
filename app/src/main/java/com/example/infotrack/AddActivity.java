@@ -85,7 +85,7 @@ public class AddActivity extends AppCompatActivity implements AdapterView.OnItem
         int buttonID = radioGroup.getCheckedRadioButtonId();
         error = "You must select your gender";
         if(buttonID == -1) {
-            Toast.makeText(getApplicationContext(), error, Toast.LENGTH_SHORT).show();
+            Toast.makeText(AddActivity.this, error, Toast.LENGTH_SHORT).show();
             return;
         }
         radioButton = findViewById(buttonID);
@@ -93,12 +93,14 @@ public class AddActivity extends AppCompatActivity implements AdapterView.OnItem
 
 
         reference.child(id).setValue(new Student(name, age, gender, section));
-        Toast.makeText(getApplicationContext(), "Data Inserted", Toast.LENGTH_SHORT).show();
+        Toast.makeText(AddActivity.this, "Data Inserted", Toast.LENGTH_SHORT).show();
 
 
     }
 
     public void mainMenu(View view) {
-        startActivity(new Intent(getApplicationContext(), MenuActivity.class));
+        finish();
+        startActivity(new Intent(AddActivity.this, MenuActivity.class));
     }
+
 }

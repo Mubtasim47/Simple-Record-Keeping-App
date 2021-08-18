@@ -23,14 +23,14 @@ import com.google.firebase.database.ValueEventListener;
 
 public class FindActivity extends AppCompatActivity {
 
-    TextView textView1, textView2, textView3, textView4;
-    EditText editText;
+    private TextView textView1, textView2, textView3, textView4;
+    private EditText editText;
 
-    ProgressBar progressBar;
+    private ProgressBar progressBar;
 
     DatabaseReference reference;
 
-    String name, age, gender, section;
+    private String name, age, gender, section;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +49,6 @@ public class FindActivity extends AppCompatActivity {
     }
 
     public void submit(View view) {
-
         String key = editText.getText().toString();
         if(TextUtils.isEmpty(key)) {
             editText.setError("Required field");
@@ -59,40 +58,41 @@ public class FindActivity extends AppCompatActivity {
         reference = FirebaseDatabase.getInstance().getReference().child("Students").child(key);
 
         progressBar.setVisibility(View.VISIBLE);
-        reference.addValueEventListener(new ValueEventListener() {
+        reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                try {
-                    name = snapshot.child("name").getValue().toString();
-                    age = snapshot.child("age").getValue().toString();
-                    gender = snapshot.child("gender").getValue().toString();
-                    section = snapshot.child("section").getValue().toString();
-                }catch (Throwable e) {
-                    progressBar.setVisibility(View.INVISIBLE);
-                    Toast.makeText(getApplicationContext(), "ID not found", Toast.LENGTH_LONG).show();
-                    return;
-                }
+                    try {
+
+                        name = snapshot.child("name").getValue().toString();
+                        age = snapshot.child("age").getValue().toString();
+                        gender = snapshot.child("gender").getValue().toString();
+                        section = snapshot.child("section").getValue().toString();
 
 
+                        progressBar.setVisibility(View.INVISIBLE);
+                        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                        ft.replace(R.id.fdFragmentloadid, new DisplayFragment());
+                        ft.commit();
 
 
-                progressBar.setVisibility(View.INVISIBLE);
-                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.fdFragmentloadid, new DisplayFragment());
-                ft.commit();
+                        age = "Age: " + age;
+                        gender = "Gender: " + gender;
+                        section = "Section: " + section;
 
+                        textView1.setText(name);
+                        textView2.setText(age);
+                        textView3.setText(gender);
+                        textView4.setText(section);
 
-                age = "Age: " + age;
-                gender = "Gender: " + gender;
-                section = "Section: " + section;
+                    } catch (Throwable e) {
+                        progressBar.setVisibility(View.INVISIBLE);
+                        Toast.makeText(FindActivity.this, "ID not found", Toast.LENGTH_SHORT).show();
+                    }
 
-                textView1.setText(name);
-                textView2.setText(age);
-                textView3.setText(gender);
-                textView4.setText(section);
 
             }
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
@@ -102,6 +102,12 @@ public class FindActivity extends AppCompatActivity {
     }
 
     public void mainMenu(View view) {
-        startActivity(new Intent(getApplicationContext(), MenuActivity.class));
+        startActivity(new Intent(FindActivity.this, MenuActivity.class));
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+        startActivity(new Intent(FindActivity.this, MenuActivity.class));
     }
 }
