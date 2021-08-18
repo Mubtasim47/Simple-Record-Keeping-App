@@ -103,4 +103,10 @@ public class AddActivity extends AppCompatActivity implements AdapterView.OnItem
         startActivity(new Intent(AddActivity.this, MenuActivity.class));
     }
 
+    @Override
+    public void onBackPressed() {
+        finish();
+        startActivity(new Intent(AddActivity.this, MenuActivity.class));
+    }
+
 }
